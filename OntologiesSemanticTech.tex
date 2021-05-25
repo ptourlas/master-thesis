@@ -1,0 +1,150 @@
+\documentclass[12pt, a4paper]{book}
+\usepackage[english, greek]{babel}
+%\usepackage[english, greek]{biblatex}
+%\usepackage[bbgreekl]{mathbbol}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{bbm}
+%command determining the iso-8859-7 as a code page for Greek.
+\usepackage[iso-8859-7]{inputenc}
+%command for encapsulating figures in the tex document.
+\usepackage{txfonts,pxfonts}
+\usepackage{graphicx}
+%\usepackage[pdftex]{color,graphicx}
+\usepackage{cite}
+%command to change the enumeration counter.
+\usepackage{enumerate}
+%command to include the contents of an ascii file.
+%\usepackage{verbatim}
+%command determining the exact position of the figure.
+\usepackage{float}
+%command to to have subfigures within figures.
+\usepackage{subfig}
+\usepackage{kerkis}
+\usepackage{fancyhdr}
+
+\setlength{\textwidth}{15cm}
+\setlength{\textheight}{22cm}
+%\newcommand{\qed}{\nobreak \ifvmode \relax \else
+%\ifdim\lastskip<1.5em \hskip-\lastskip
+%\hskip1.5em plus0em minus0.5em \fi \nobreak
+%\vrule height0.3em width0.3em depth0.25em\fi}
+ 
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\addtolength{\headheight}{0.5pt} % make space for the rule
+
+\newtheorem{theorem}{�������}[section]
+\newtheorem{Definition}{�������}[section]
+\newtheorem{Properties}{���������}[section]
+\newtheorem{Conjecture}{�������}[section]
+\newtheorem{Hypothesis}{�������}[section]
+\newtheorem{Remark}{����������}[section]
+\newtheorem{Proposition}{�������}[section]
+\newtheorem{Lemma}{�����}[theorem]
+\newtheorem{Corollary}{�������}[theorem]
+\newtheorem{proof}{��������}[theorem]
+\newtheorem{example}{����������}[section]
+\setlength{\parindent}{0.5cm}
+\setlength{\parskip}{0.25cm}
+
+\lhead{}
+\begin{document}
+
+\begin{titlepage}
+\pagestyle{empty}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+% Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+
+%----------------------------------------------------------------------------------------
+%   HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\textsc{\LARGE ������������ ������� \\ ����� �����������}\\[1.5cm]
+% Name of your university/college
+\textsc{\Large ������������ �������}\\[0.5cm] % Major heading such as course name
+\textsc{\large ������� ��� ����������}\\[0.5cm] % Minor heading such as course title
+
+%----------------------------------------------------------------------------------------
+%   TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.4cm]
+{ \huge \bfseries �� ���������� �� �������� ��� ������������� �����������}\\[0.4cm] % Title of your document
+\HRule \\[1.5cm]
+
+%----------------------------------------------------------------------------------------
+%   AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{����������:}\\
+���������� \textsc{�������} % Your name
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{���������:} \\
+���������� \textsc{������} % Supervisor's Name
+\end{flushright}
+\end{minipage}\\[2cm]
+
+% If you don't want a supervisor, uncomment the two lines below and remove the section
+%above
+%\Large \emph{Author:}\\
+%John \textsc{Smith}\\[3cm] % Your name
+
+%----------------------------------------------------------------------------------------
+%   DATE SECTION
+%----------------------------------------------------------------------------------------
+
+{\large 27 ����������� 2021}\\[2cm] % Date, change the \today to a set date if you want to be precise
+
+%----------------------------------------------------------------------------------------
+%   LOGO SECTION
+%----------------------------------------------------------------------------------------
+
+\includegraphics{AegeanSimaBW.eps} \\[1cm]
+
+% Include a department/university logo -this will require the graphicx package
+%----------------------------------------------------------------------------------------
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+\pagestyle{empty}
+
+\include{acknowledgements}
+%\maketitle
+\frontmatter
+\pagestyle{fancy}
+\tableofcontents
+\listoftables
+\listoffigures
+
+\mainmatter
+
+\bibliographystyle{plain}
+%\pagenumbering{arabic}
+\pagestyle{fancy}
+\include{chapter1}
+%\include{chapter2}
+%\include{chapter3}
+%\include{chapter4}
+
+\selectlanguage{greek}
+
+% https://tex.stackexchange.com/questions/18045/problem-with-compiling-bibtex-no-citation-commands-error/21126
+\nocite{*}
+
+\bibliography{OntologiesSemanticTech}
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
