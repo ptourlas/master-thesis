@@ -36,14 +36,14 @@
 \addtolength{\headheight}{0.5pt} % make space for the rule
 
 \newtheorem{theorem}{Θεώρημα}[section]
-\newtheorem{Definition}{Ορισμός}[section]
-\newtheorem{Properties}{Ιδιότητες}[section]
-\newtheorem{Conjecture}{Εικασία}[section]
-\newtheorem{Hypothesis}{Υπόθεση}[section]
-\newtheorem{Remark}{Παρατήρηση}[section]
-\newtheorem{Proposition}{Πρόταση}[section]
-\newtheorem{Lemma}{Λήμμα}[theorem]
-\newtheorem{Corollary}{Πόρισμα}[theorem]
+\newtheorem{definition}{Ορισμός}[section]
+\newtheorem{properties}{Ιδιότητες}[section]
+\newtheorem{conjecture}{Εικασία}[section]
+\newtheorem{ypothesis}{Υπόθεση}[section]
+\newtheorem{remark}{Παρατήρηση}[section]
+\newtheorem{proposition}{Πρόταση}[section]
+\newtheorem{lemma}{Λήμμα}[theorem]
+\newtheorem{corollary}{Πόρισμα}[theorem]
 \newtheorem{proof}{Απόδειξη}[theorem]
 \newtheorem{example}{Παράδειγμα}[section]
 \setlength{\parindent}{0.5cm}
@@ -121,13 +121,16 @@
 \end{titlepage}
 \pagestyle{empty}
 
-\include{acknowledgements}
+
+% \include{acknowledgements}
+
 %\maketitle
 \frontmatter
 \pagestyle{fancy}
-\tableofcontents
-\listoftables
-\listoffigures
+
+% \tableofcontents
+% \listoftables
+% \listoffigures
 
 \mainmatter
 
@@ -135,7 +138,8 @@
 %\pagenumbering{arabic}
 \pagestyle{fancy}
 %\include{chapter1}
-\include{chapter2}
+\include{chapter2/intro}
+\include{chapter2/logical_foundations}
 %\include{chapter3}
 %\include{chapter4}
 
