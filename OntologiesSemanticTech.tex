@@ -30,7 +30,9 @@
 %\ifdim\lastskip<1.5em \hskip-\lastskip
 %\hskip1.5em plus0em minus0.5em \fi \nobreak
 %\vrule height0.3em width0.3em depth0.25em\fi}
- 
+
+\newcommand{\eng}[1]{\selectlanguage{english}#1\selectlanguage{greek}}
+
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
 \addtolength{\headheight}{0.5pt} % make space for the rule
