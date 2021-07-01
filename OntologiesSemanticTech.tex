@@ -37,6 +37,8 @@
 
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+\setlength{\headheight}{14.5pt}
 \addtolength{\headheight}{0.5pt} % make space for the rule
 
 \newtheorem{theorem}{Θεώρημα}[section]
@@ -151,8 +153,8 @@
 % https://tex.stackexchange.com/questions/18045/problem-with-compiling-bibtex-no-citation-commands-error/21126
 \nocite{*}
 
-%\selectlanguage{english}
-%\bibliography{OntologiesSemanticTech}
+\selectlanguage{english}
+\bibliography{OntologiesSemanticTech}
 \end{document}
 %%% Local Variables:
 %%% mode: latex
