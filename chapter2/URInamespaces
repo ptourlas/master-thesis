@@ -4,5 +4,8 @@ namespace URI: http://www.w3.org/1999/02/22-rdf-syntax-ns#
 prefix "ex:"
 namespace URI: http://www.example.org/
 
+prefix "exterms:"
+namespace URI: http://www.example.org/terms/ 
+
 prefix "xsd:"
 namespace URI: http://www.w3.org/2001/XMLSchema#
