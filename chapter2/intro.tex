@@ -191,5 +191,99 @@
 να περιγράφουμε με μοναδικό τρόπο οτιδήποτε. Έτσι γίνεται ευκολότερος ο συνδυασμός
 δεδομένων από διαφορετικές πηγές.
 
+Οι βασικοί κανόνες σύνταξης προκύπτουν από την γλώσσα σήμανσης
+\eng{XML (Extensible Markup Language)\footnote{https://www.w3.org/TR/xml/}} και
+περιλαμβάνουν:
 
+\eng{\lstset{ basicstyle=\ttfamily\small, numbers=left}}
 
+\begin{itemize}
+	
+	\item Ετικέτες (\eng{tags}) της μορφής \eng{\lstinline +<X>,</X>+}
+	και \eng{\lstinline +<X/>+}
+
+	\item Στοιχεία (\eng{elements}) που αποτελούνται από ετικέτες και
+	κάποιο περιεχόμενο όπως \eng{\lstinline +<greeting>Hello, world!</greeting>+}
+	ή ετικέτες χωρίς περιεχόμενο όπως \eng{\lstinline +<greet/>+}.
+
+	\item Χαρακτηριστικά (\eng{attributes}) που συνοδεύουν μια ετικέτα
+	όπως\\
+	\eng{\lstinline[stringstyle=\ttfamily]{ <greeting wave=true>Hello!</greeting>}}
+	ή \eng{\lstinline +<greet name=John/>+}
+
+\end{itemize}
+
+\subsection{Ανταλλαγή Δεδομένων και Ταξινομίες}
+
+\quad Το μοντέλο \eng{RDF} επιτρέπει την περιγραφή αντικειμένων στον Παγκόσμιο
+Ιστό καθώς και των σχέσεων και των ιδιοτήτων τους. Βασίζεται σε τριάδες της μορφής
+``υποκείμενο - κατηγόρημα - αντικείμενο`` (\eng{subject - predicate - object}).
+Συγκεκριμένα θα μελετήσουμε την παραλλαγή \eng{RDF/XML} η οποία βασίζεται στους
+κανόνες σύνταξης της \eng{XML}. Επιπλέον αξιοποιεί τα \eng{URIs} για τις
+ονομασίες αντικείμένων.
+
+\begin{remark}
+	Η μορφή \eng{RDF/XML} είναι η πρώτη που δημιουργήθηκε για το μοντέλο \eng{RDF}
+	αλλά όχι η μοναδική. Σήμερα υπάρχουν διάφορες εναλλακτικές μορφές όπως:
+	\begin{itemize}
+		\eng{
+		\item Turtle
+		\item N-Triples
+		\item N-Quads
+		\item JSON-LD
+		\item RDF/JSON
+		}
+	\end{itemize}
+	Στόχος τους είναι μια αναπαράσταση πιο φιλική προς τον άνθρωπο, η μείωση των
+	χαρακτήρων που απαιτούνται για μια πλήρη αναπαράσταση αλλά και οι δυνατότητες
+	αποθήκευσης σε βάσεις ειδικά σχεδιασμένες για \eng{RDF} τριάδες
+	(\eng{triplestores\footnote{https://en.wikipedia.org/wiki/Triplestore}})
+\end{remark}
+
+Στη συνέχεια παρουσιάζεται ένα απλό παράδειγμα που ξεκινά από μια δήλωση σε φυσική
+γλώσσα, την τριάδα στην οποία αντιστοιχεί και την έκφρασή της σε \eng{RDF/XML}.
+
+\begin{example}
+	Έστω η ακόλουθη δήλωση σε φυσική γλώσσα (για ευκολία θα χρησιμοποιήσουμε
+	την αγγλική γλώσσα):
+	\begin{center}
+		\eng{
+		http://www.example.org/index.html
+		has a creation date
+		whose value is August 16, 1999.
+		}
+	\end{center}
+
+	Αρχικά ορίζουμε κάποια προθέματα τα οποία μας επιτρέπουν να γράψουμε \eng{URIs}
+	σε συντομευμένη μορφή και να καθορίσουμε τους τύπους δεδομένων που χρησιμοποιούνται.
+
+	\eng{ \lstinputlisting{chapter2/URInamespaces} }
+
+	Στη συνέχεια κατασκευάζουμε μια τριάδα από τα δεδομένα μας:
+
+	\eng{
+		\lstinline +ex:index.html  exterms:creation-date  "1999-08-16"\^\^xsd:date+
+	}
+
+	Το υποκείμενο (ιστοσελίδα) φέρει μια ιδιότητα (ημερομηνία δημιουργίας) με μια
+	τιμή (1999-08-16). Επίσης ο τύπος αυτής της τιμής (ημερομηνία) καθορίζεται
+	ξεχωριστά (\eng{\lstinline +\^\^xsd:date+}). Η τελική μορφή σε \eng{RDF/XML}
+	είναι:
+
+	\eng{ \lstinputlisting[language=XML]{chapter2/RDFexample.xml} }
+
+	Tα βασικότερα σημεία της υλοποίησης είναι:
+
+	\begin{itemize}
+		\item Γραμμές 3 και 4 : Ορίζονται τα \eng{namespaces} που θα χρησιμοποιήσουμε.
+		\item Γραμμή 5: Ξεκινά η περιγραφή μιας τριάδας με την ετικέτα\\
+		\eng{\lstinline +<rdf:Description>+}
+		\item Γραμμή 6: Ορίζεται το υποκείμενο της τριάδας με την ετικέτα\\
+		\eng{\lstinline +<rdf:about>+}
+		\item Γραμμή 7: Ξεκινά η περιγραφή του κατηγορήματος της τριάδας
+		με την ετικέτα\\
+		\eng{\lstinline +<exterms:creation-date>+}
+		\item Γραμμή 8: Το χαρακτηριστικό \eng{\lstinline +<rdf:datatype>+}
+		καθορίζει τον τύπο του στοιχείου εντός της ετικέτας.
+	\end{itemize}
+\end{example}
