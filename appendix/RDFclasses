@@ -1,0 +1,16 @@
+RDF CLASSES
+-----------
+rdf:XMLLiteral 
+	the class of XML literal values
+rdf:Property
+	the class of properties
+rdf:Statement
+	the class of RDF statements
+rdf:Alt, rdf:Bag, rdf:Seq
+	containers of alternatives, unordered containers
+	and ordered containers (rdfs:Container is a
+	super-class of the three)
+rdf:List
+	the class of RDF Lists
+rdf:nil
+	an instance of rdf:List representing the empty list

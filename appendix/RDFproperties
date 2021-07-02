@@ -1,0 +1,18 @@
+RDF PROPERTIES
+--------------
+rdf:type
+	an instance of rdf:Property used to state
+	that a resource is an instance of a class
+rdf:first
+	the first item in the subject RDF list
+rdf:rest
+	the rest of the subject RDF list after
+	rdf:first
+rdf:value
+	idiomatic property used for structured values
+rdf:subject
+	the subject of the RDF statement
+rdf:predicate
+	the predicate of the  RDF statement
+rdf:object
+	the object of the RDF statement

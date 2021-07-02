@@ -1,0 +1,22 @@
+RDF ATTRIBUTES
+--------------
+rdf:about
+	defines the resource being described
+rdf:Description
+	container for the description of a resource
+rdf:resource
+	a resource to identify a property
+rdf:datatype
+	data type of an element
+rdf:ID
+	the ID of an element
+rdf:li
+	list
+rdf:_n
+	defines a node
+rdf:nodeID
+	the ID of an element node
+rdf:parseType
+	defines how an element should be parsed
+rdf:RDF
+	the root of an RDF document
