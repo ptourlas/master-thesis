@@ -1,0 +1,5 @@
+ex:a 	exterms:name 	"John Doe"
+ex:a 	exterms:email	"jd@example.com"
+ex:b 	exterms:name 	"Mike Brown"
+ex:b 	exterms:email	"mike@brown.org"
+ex:c 	exterms:email	"dbook@example.org"

@@ -1,5 +1,8 @@
+PREFIX ex: <http://www.example.org/67>
+PREFIX exterms: <http://www.example.org/terms>
+
 SELECT ?title
 WHERE
 {
-	ex:book dc:title ?title
+	ex:book exterms:title ?title
 }

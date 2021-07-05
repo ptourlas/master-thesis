@@ -1,0 +1,9 @@
+PREFIX ex: <http://www.example.org/>
+PREFIX exterms: <http://www.example.org/terms>
+
+SELECT ?name ?email
+WHERE
+{
+	?x exterms:name ?name
+	?x exterms:email ?email
+}
