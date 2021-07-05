@@ -6,30 +6,30 @@
 
 <rdf:Description rdf:about="MotorVehicle">
 	<rdf:type 
-	rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	rdf:resource="http://www.w3.org/rdf-schema#Class"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="PassengerVehicle">
 	<rdf:type
-	rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	rdf:resource="http://www.w3.org/rdf-schema#Class"/>
 	<rdfs:subClassOf rdf:resource="#MotorVehicle"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="Truck">
 	<rdf:type
-	rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	rdf:resource="http://www.w3.org/rdf-schema#Class"/>
 	<rdfs:subClassOf rdf:resource="#MotorVehicle"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="Van">
 	<rdf:type
-	rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	rdf:resource="http://www.w3.org/rdf-schema#Class"/>
 	<rdfs:subClassOf rdf:resource="#MotorVehicle"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="MiniVan">
 	<rdf:type 
-	rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	rdf:resource="http://www.w3.org/rdf-schema#Class"/>
 	<rdfs:subClassOf rdf:resource="#Van"/>
 	<rdfs:subClassOf rdf:resource="#PassengerVehicle"/>
 </rdf:Description>
