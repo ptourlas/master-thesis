@@ -1,0 +1,5 @@
+SELECT ?title
+WHERE
+{
+	ex:book dc:title ?title
+}
