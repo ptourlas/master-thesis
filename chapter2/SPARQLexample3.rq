@@ -1,0 +1,10 @@
+PREFIX ex: <http://www.example.org/>
+PREFIX exterms: <http://www.example.org/terms>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+
+SELECT ?filename ?creator
+WHERE
+{
+	?resource ex:filename ?filename
+	?resource dc:creator ?creator
+}

@@ -1,0 +1,16 @@
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix ex: <http://www.example.org/>
+prefix exterms: <http://www.example.org/terms>
+prefix dc: <http://purl.org/dc/elements/1.1/>
+
+ex:composer rdfs:subPropertyOf dc:creator
+ex:photographer rdfs:subPropertyOf dc:creator
+
+ex:file02924 ex:fileName "9894397.mp3"
+ex:file02924 ex:composer "Charles Ives"
+
+ex:file74395 ex:fileName "884930.mp3"
+ex:file74395 ex:composer "Eric Satie"
+
+ex:file69383 ex:fileName "119933.jpg"
+ex:file69383 ex:photographer "Diane Arbus"
