@@ -182,5 +182,107 @@
 
 \end{definition}
 
+\begin{definition}
+	Ορίζουμε $\mathbb{C}$ να είναι το σύνολο όλων των εννοιών που προέρχονται
+	από ένα σύνολο ονομάτων εννοιών $N_C$.
+\end{definition}
+
+\begin{definition}
+	Έστω $C,D\in \mathbb{C}$. Η έκφραση $C\sqsubseteq D$ ονομάζεται αξίωμα
+	εγκλεισμού έννοιας και σημαίνει ότι η έννοια $D$ συμπεριλαμβάνει την
+	έννοια $C$.
+\end{definition}
+
+Μπορούμε έτσι να δώσουμε τον ορισμό του \eng{TBox}.
+
+\begin{definition}
+	Έστω $\mathcal{T}$ ένα πεπερασμένο σύνολο αξιωμάτων εγκλεισμού
+	εννοιών. Το $\mathcal{T}$ ονομάζεται \eng{TBox} της $\mathcal{SROIQ}$.
+\end{definition}
+
 \subsection{\eng{ABox}}
 
+Μέσω των \eng{RBox} και \eng{TBox} μπορούμε να εκφράσουμε χαρακτηριστικά
+των ιδιοτήτων και των κλάσεων αντίστοιχα. Για τα χαρακτηριστικά ατόμων θα
+χρειαστούμε του ακόλουθους ορισμούς.
+
+\begin{definition}
+	Έστω $a$ ένα άτομο και $C$ μια έννοια. Τότε με $C(a)$ θα συμβολίζουμε
+	έναν εννοιολογικό ισχυρισμό, δηλαδή το γεγονός ότι το άτομο $a$ είναι
+	στιγμιότυπο της έννοιας $C$.
+\end{definition}
+
+\begin{definition}
+	Έστω $a,b$ άτομα και $r$ μια ιδιότητα. Τότε με $r(a,b)$ θα συμβολίζουμε
+	τον ισχυρισμό ιδιότητας, δηλαδή το γεγονός ότι το άτομο $a$ συνδέεται
+	με το άτομο $b$ μέσω της σχέσης $r$. Αντίστοιχα, με $\lnot r(a,b)$ θα
+	συμβολίζουμε την άρνηση της $r$.
+\end{definition}
+
+\begin{definition}
+	Έστω $a,b$ άτομα. Τότε με $a \approx b$ θα συμβολίζουμε τον ισχυρισμό
+	ατομικής ισότητας, δηλαδή το γεγονός ότι δυο ονόματα αφορούν την ίδια
+	οντότητα.
+\end{definition}
+
+\begin{remark}
+	Η ατομική ισότητα μπορεί να φανεί χρήσιμη όταν συνδυάζουμε γνώση για
+	ένα πεδίο ενδιαφέροντος από διαφορετικές πηγές. Αν γαι παράδειγμα
+	συνδυάζαμε δυο οντολογίες για τα ζώα της Αφρικής και στη μια
+	συναντούσαμε το είδος \eng{Acinonyx jubatus} ενώ στην άλλη το είδος
+	\eng{Acinonyx venator} θα ίσχυε ότι 
+	\eng{Acinonyx venator} $\approx$ \eng{Acinonyx jubatus} καθώς και τα
+	δυο αποτελούν ονόματα του τσιτάχ.
+\end{remark}
+
+Οι παραπάνω ορισμοί συνθέτουν τους λεγόμενους ατομικούς ισχυρισμούς.
+Βάσει αυτών, μπορούμε να δώσουμε και τον ορισμό του \eng{ABox}.
+
+\begin{definition}
+	Ένα πεπερασμένο σύνολο $\mathcal{A}$ από ατομικούς ισχυρισμούς
+	ονομάζεται \eng{ABox}. Επιπλέον, το $\mathcal{A}$ ονομάζεται
+	εκτατικά ανηγμένο αν περιέχει μόνο ονόματα εννοιών και ονόματα
+	ιδιοτήτων.
+\end{definition}
+
+\subsection{Βάσεις Γνώσης}
+
+Έχοντας καλύψει όλα τα δομικά χαρακτηριστικά της γλώσσας 
+$\mathcal{SROIQ}$ μπορούμε να ορίσουμε τις βάσεις γνώσης που
+μπορούμε να κατασκευάσουμε.
+
+\begin{definition}
+	Μια $\mathcal{SROIQ}$ βάση γνώσης $\mathcal{KB}$ αποτελεί την ένωση ενός
+	ενός \eng{RBox} $\mathcal{R}$, ενός
+	ενός \eng{TBox} $\mathcal{T}$ και ενός
+	ενός \eng{ABox} $\mathcal{A}$. Τα στοιχεία της βάσης γνώσης
+	ονομάζονται αξιώματα. Ακόμα, συμβολίζουμε με
+	$N_I(\mathcal{KB}),N_C(\mathcal{KB})$ και $N_R(\mathcal{KB})$
+	τα ονόματα ατόμων, εννοιών και ιδιοτήτων της $\mathcal{KB}$,
+	αντίστοιχα.
+\end{definition}
+
+Ένα απλό παράδειγμα μιας $\mathcal{SROIQ}$ βάσης γνώσης είναι το 
+εξής.
+
+\begin{example} Έστω η βάση γνώσης $\mathcal{KB}$:
+
+	\eng{RBox} $\mathcal{R}$\\
+	\eng{owns} $\sqsubseteq$ \eng{caresFor} $\Rightarrow$
+	\eng{"If somebody owns something, they care for it."}\\
+
+	\eng{TBox} $\mathcal{T}$\\
+	\eng{Healthy} $\sqsubseteq$ $\lnot$\eng{Dead} $\Rightarrow$
+	\eng{"Healthy beings are not dead."}\\
+	\eng{Cat} $\sqsubseteq$ \eng{Alive} $\sqcup$ \eng{Dead}
+	$\Rightarrow$ \eng{"Every cat is dead or alive."}\\
+	\eng{HappyCatOwner} $\sqsubseteq$ 
+	$\exists$\eng{owns.Cat} $\sqcap\ \forall$\eng{caresFor.Healthy}
+	$\Rightarrow$ \eng{"A happy cat owner owns a cat and 
+	all beings he cares for are healthy."}\\
+
+	\eng{ABox} $\mathcal{A}$\\
+	\eng{HappyCatOwner(schr\"odinger)} $\Rightarrow$
+	\eng{"Schr\"odinger is happy cat owner."}
+
+\end{example}
