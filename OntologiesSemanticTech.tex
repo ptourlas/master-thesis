@@ -35,6 +35,7 @@
 %\vrule height0.3em width0.3em depth0.25em\fi}
 
 \newcommand{\eng}[1]{\selectlanguage{english}#1\selectlanguage{greek}}
+\newcommand{\inline}[1]{\eng{\lstinline + #1 +}}
 
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
@@ -129,15 +130,15 @@
 \pagestyle{empty}
 
 
-% \include{acknowledgements}
+\include{acknowledgements}
 
-%\maketitle
+% \maketitle
 \frontmatter
 \pagestyle{fancy}
 
-% \tableofcontents
-% \listoftables
-% \listoffigures
+\tableofcontents
+\listoftables
+\listoffigures
 
 \mainmatter
 
@@ -146,11 +147,12 @@
 \pagestyle{fancy}
 
 \include{chapter1/intro}
-% \include{chapter2/semtech}
+\include{chapter2/semtech}
+\include{chapter3/ontologies}
 
 
 % https://tex.stackexchange.com/questions/18045/problem-with-compiling-bibtex-no-citation-commands-error/21126
-% \nocite{*}
+\nocite{*}
 
 % \include{appendix/appendix}
 
