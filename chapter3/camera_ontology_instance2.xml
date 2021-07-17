@@ -1,0 +1,21 @@
+<SLR rdf:about="Olympus-OM-10">
+	<lens>
+		<Lens>
+			<focal-length>75-300mm zoom</focal-length>
+			<f-stop>4.5-5.6</f-stop>
+		</Lens>
+	</lens>
+	<body>
+		<Body>
+			<shutter-speed rdf:parseType="Resource">
+				<min>0.002</min>
+				<max>1.0</max>
+				<units>seconds</units>
+			</shutter-speed>
+		</Body>
+	</body>
+	<cost rdf:parseType="Resource">
+		<rdf:value>325</rdf:value>
+		<currency>USD</currency>
+	</cost>
+</SLR>

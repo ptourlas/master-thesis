@@ -1,0 +1,17 @@
+<Camera>
+	<lens>
+		<Lens>
+			<size>75-300mm zoom</size>
+			<aperture>4.5-5.6</aperture>
+		</Lens>
+	</lens>
+	<body>
+		<Body>
+			<shutter-speed rdf:parseType="Resource">
+				<min>0.002</min>
+				<max>1.0</max>
+				<units>seconds</units>
+			</shutter-speed>
+		</Body>
+	</body>
+</Camera>
