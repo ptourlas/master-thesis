@@ -175,8 +175,9 @@
 
 \begin{figure}[ht]
 	\includegraphics[scale=0.9]{thesisfig/semantic-web-stack.eps}
-	\caption{Αρχιτεκτονική του Εννοιολογικού Ιστού\\
-	(πηγή: \eng{https://commons.wikimedia.org/wiki/File:Semantic\_web\_stack.svg})
+	\caption[Αρχιτεκτονική του Εννοιολογικού Ιστού]{
+		Αρχιτεκτονική του Εννοιολογικού Ιστού\\
+		(πηγή: \eng{https://commons.wikimedia.org/wiki/File:Semantic\_web\_stack.svg})
 	}
 	\label{fig:semanticlayers}
 \end{figure}
@@ -218,9 +219,9 @@
 \quad Το μοντέλο \eng{RDF} επιτρέπει τον ορισμό οντοτήτων στον Παγκόσμιο
 Ιστό καθώς και των σχέσεων και των ιδιοτήτων τους. Βασίζεται σε τριάδες της μορφής
 ``υποκείμενο - κατηγόρημα - αντικείμενο`` (\eng{subject - predicate - object}).
-Συγκεκριμένα θα μελετήσουμε την παραλλαγή \eng{RDF/XML} η οποία βασίζεται στους
-κανόνες σύνταξης της \eng{XML}. Επιπλέον αξιοποιεί τα \eng{URIs} για τις
-ονομασίες οντοτήτων.
+Στη συνέχεια παρουσιάζεται το συντακτικό \eng{RDF/XML}, το οποίο βασίζεται στους
+κανόνες σύνταξης της \eng{XML} για την αναπαράσταση τριάδων.
+Επιπλέον αξιοποιεί τα \eng{URIs} για τις ονομασίες οντοτήτων.
 
 \begin{remark}
 	Η μορφή \eng{RDF/XML} είναι η πρώτη που δημιουργήθηκε για το μοντέλο \eng{RDF}
@@ -355,15 +356,27 @@
 	ιδιότητα \inline{Author} τύπου \inline{Person}.
 \end{example}
 
-Στη συνέχεια παρουσιάζεται μια απλή ταξινομία οχημάτων σε μορφή τριάδων.
+Στη συνέχεια παρουσιάζεται μια απλή ταξινομία οχημάτων.
 Τα προθέματα των \eng{URI} βασίζονται σε όσα έχουν οριστεί στο παράδειγμα
-\ref{rdf:example} με μια επιπλέον προσθήκη για το πρόθεμα \inline{rdfs:}
+\ref{rdf:example} με μια επιπλέον προσθήκη για το πρόθεμα \inline{rdfs}.
 
-\eng{ \lstinputlisting{chapter2/RDFStaxonomy} }
 
-Η παραπάνω ταξινομία μπορεί να γραφτεί σε μορφή \eng{RDF/XML} ως εξής:
+\begin{example}
+	Ορίζουμε την ακόλουθη ταξινομία σε μορφή τριάδων:	
+	\eng{ \lstinputlisting{chapter2/RDFStaxonomy} }
 
-\eng{ \lstinputlisting[language=XML]{chapter2/RDFSexample.xml}}
+	\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.6]{thesisfig/rdfs.eps}
+		\caption{Γράφος μιας ταξινομίας σε \eng{RDFS}}
+		\label{fig:rdfs}
+	\end{center}
+	\end{figure}
+	
+	Η παραπάνω ταξινομία μπορεί να γραφτεί σε μορφή \eng{RDF/XML} ως εξής:
+	
+	\eng{ \lstinputlisting[language=XML]{chapter2/RDFSexample.xml}}
+\end{example}
 
 \subsection{Ανάζητηση Πληροφοριών σε Δεδομένα \eng{RDF}}
 
