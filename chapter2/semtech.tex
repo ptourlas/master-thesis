@@ -170,8 +170,7 @@
 
 Η σύνθεση της αρχιτεκτονικής που περιγράψαμε φαίνεται στο σχήμα
 \ref{fig:semanticlayers}. Στη συνέχεια θα δώσουμε μια συνοπτική περιγραφή
-για κάθε ένα από τα στρώματα που αναφέραμε καθώς μια ανάλυση των δυσκολιών
-που συναντώνται στην ενοποίησή τους.
+για κάθε ένα από τα στρώματα που αναφέραμε.
 
 \begin{figure}[ht]
 	\includegraphics[scale=0.9]{thesisfig/semantic-web-stack.eps}
@@ -360,19 +359,17 @@
 Τα προθέματα των \eng{URI} βασίζονται σε όσα έχουν οριστεί στο παράδειγμα
 \ref{rdf:example} με μια επιπλέον προσθήκη για το πρόθεμα \inline{rdfs}.
 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.4]{thesisfig/rdfs.eps}
+	\caption{Γράφος μιας ταξινομίας σε \eng{RDFS}}
+	\label{fig:rdfs}
+\end{figure}	
 
 \begin{example}
 	Ορίζουμε την ακόλουθη ταξινομία σε μορφή τριάδων:	
 	\eng{ \lstinputlisting{chapter2/RDFStaxonomy} }
 
-	\begin{figure}[ht]
-	\begin{center}
-		\includegraphics[scale=0.6]{thesisfig/rdfs.eps}
-		\caption{Γράφος μιας ταξινομίας σε \eng{RDFS}}
-		\label{fig:rdfs}
-	\end{center}
-	\end{figure}
-	
 	Η παραπάνω ταξινομία μπορεί να γραφτεί σε μορφή \eng{RDF/XML} ως εξής:
 	
 	\eng{ \lstinputlisting[language=XML]{chapter2/RDFSexample.xml}}
