@@ -1,0 +1,39 @@
+RDFS PROPERTIES
+---------------
+Properties are instances of the class rdf:Property
+and describe a relation between subject resources
+and object resources. When used as such a property
+is a predicate.
+
+rdfs:domain
+	declares the class of the subject in a triple
+	whose predicate is that property
+rdfs:range
+	declares the class or datatype of the object
+	in a triple whose predicate is that property
+rdfs:subClassOf
+	allows declaration of hierarchies of classes
+	which support inheritance of a property
+	domain and range from a class to its subclasses
+rdfs:subPropertyOf
+	an instance of rdf:Property that is used to
+	state that all resources related by one
+	property are also related by another
+rdfs:label
+	an instance of rdf:Property that may be used
+	to provide a human-readable version
+	of a resource's name
+rdfs:comment
+	an instance of rdf:Property that may be used
+	to provide a human-readable description of 
+	a resource
+rdfs:seeAlso
+	an instance of rdf:Property that is used to
+	indicate a resource that might provide
+	additional information about the subject
+	resource
+rdfs:isDefinedBy
+	an instance of rdf:Property that is used
+	to indicate a resource defining the subject
+	resource and may be used to indicate an RDF
+	vocabulary in which a resource is described

@@ -1,0 +1,17 @@
+RDFS CLASSES
+------------
+rdfs:Resource
+	represents the class of everything,
+	all things described by RDF are resources
+rdfs:Class
+	declares a resource as a class for other resources
+	the definition of rdfs:Class is recursive as 
+	rdfs:Class is the class of classes and so it
+	is an instance of itself
+rdfs:Literal
+	literal values such as strings and integers,
+	may be plain or typed.
+rdfs:Datatype
+	the class of datatypes, both an instance and a 
+	subclass of rdfs:Class, each instance of 
+	rdfs:Datatype is a subclass of rdfs:Literal
