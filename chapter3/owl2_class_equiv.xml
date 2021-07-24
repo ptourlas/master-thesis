@@ -1,0 +1,3 @@
+<owl:Class rdf:about=(class A)>
+	<owl:equivalentClass rdf:resource=(class B)/>
+</owl:Class>

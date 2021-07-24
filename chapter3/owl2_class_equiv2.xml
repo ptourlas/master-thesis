@@ -1,0 +1,6 @@
+<owl:Class rdf:about=(class A)>
+	<rdfs:subClassOf rdf:resource=(class B)/>
+</owl:Class>
+<owl:Class rdf:about=(class B)>
+	<rdfs:subClassOf rdf:resource=(class A)/>
+</owl:Class>
