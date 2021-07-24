@@ -1,0 +1,3 @@
+<owl:Class rdf:about="Person">
+	<owl:equivalentClass rdf:resource="Human"/>
+</owl:Class>

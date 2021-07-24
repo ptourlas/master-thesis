@@ -1,0 +1,6 @@
+<owl:AllDisjointClasses>
+	<owl:members rdf:parseType="Collection">
+		<owl:Class rdf:about="Woman"/>
+		<owl:Class rdf:about="Man"/>
+	</owl:members>
+</owl:AllDisjointClasses>

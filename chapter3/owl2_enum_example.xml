@@ -1,0 +1,11 @@
+<owl:Class rdf:about="MyBirthdayGuests">
+	<owl:equivalentClass>
+		<owl:Class>
+			<owl:oneOf rdf:parseType="Collection">
+				<rdf:Description rdf:about="Bill"/>
+				<rdf:Description rdf:about="John"/>
+				<rdf:Description rdf:about="Mary"/>
+			</owl:oneOf>
+		</owl:Class>
+	</owl:equivalentClass>
+</owl:Class>

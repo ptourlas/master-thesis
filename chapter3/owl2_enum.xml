@@ -1,0 +1,12 @@
+<owl:Class rdf:about=(class name)>
+	<owl:equivalentClass>
+		<owl:Class>
+			<owl:oneOf rdf:parseType="Collection">
+				<rdf:Description rdf:about=(individual 1)/>
+				<rdf:Description rdf:about=(individual 2)/>
+				...
+				<rdf:Description rdf:about=(individual N)/>
+			</owl:oneOf>
+		</owl:Class>
+	</owl:equivalentClass>
+</owl:Class>
