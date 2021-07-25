@@ -1,0 +1,3 @@
+<rdf:Description rdf:about=(subject)>
+	<(predicate) rdf:resource=(object)/>
+</rdf:Description>

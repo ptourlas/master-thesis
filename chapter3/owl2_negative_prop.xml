@@ -1,0 +1,5 @@
+<owl:NegativePropertyAssertion>
+	<owl:sourceIndividual rdf:resource=(subject)/>
+	<owl:assertionProperty rdf:resource=(predicate)/>
+	<owl:targetIndividual rdf:resource=(object)/>
+</owl:NegativePropertyAssertion>

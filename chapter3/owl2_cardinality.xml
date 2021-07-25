@@ -1,0 +1,12 @@
+<rdf:Description rdf:about=(individual)>
+	<rdf:type>
+		<owl:Restriction>
+			<owl:(cardinality restriction)
+	   rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">
+        (value)
+       </owl:(cardinality restriction)>
+			<owl:onProperty rdf:resource=(property)/>
+			<owl:onClass rdf:resource=(class)/>
+		</owl:Restriction>
+	</rdf:type>
+</rdf:Description>

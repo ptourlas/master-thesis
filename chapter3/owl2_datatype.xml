@@ -1,0 +1,3 @@
+<(class) rdf:about=(individual)>
+	<(property) rdf:datatype=(prefix)(datatype)>(value)</(property)>
+</(class)>

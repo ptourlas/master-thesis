@@ -1,0 +1,3 @@
+<rdf:Description rdf:about=(individual A)>
+	<owl:sameAs rdf:resource=(individual B)/>
+</rdf:Description>

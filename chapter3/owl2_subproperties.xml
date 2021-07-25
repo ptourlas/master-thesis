@@ -1,0 +1,3 @@
+<owl:ObjectProperty rdf:about=(property A)>
+	<rdfs:subPropertyOf rdf:resource=(property B)/>
+</owl:ObjectProperty>

@@ -1,0 +1,7 @@
+<owl:Class rdf:about=(new class)>
+	<owl:equivalentClass>
+		<owl:Class>
+			<owl:complementOf rdf:resource=(existing class)/>
+		</owl:Class>
+	</owl:equivalentClass>
+</owl:Class>

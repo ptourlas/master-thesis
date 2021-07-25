@@ -1,0 +1,12 @@
+<owl:Class rdf:about="ChildlessPerson">
+	<owl:equivalentClass>
+		<owl:Class>
+			<owl:intersectionOf rdf:parseType="Collection">
+				<owl:Class rdf:about="Person"/>
+				<owl:Class>
+					<owl:complementOf rdf:resource="Parent"/>
+				</owl:Class>
+			</owl:intersectionOf>
+		</owl:Class>
+	</owl:equivalentClass>
+</owl:Class>

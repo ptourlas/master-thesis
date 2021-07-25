@@ -1,0 +1,8 @@
+<owl:Class rdf:about=(class)>
+	<owl:equivalentClass>
+		<owl:Restriction>
+			<owl:onProperty rdf:resource=(property)/>
+			<owl:someValuesFrom rdf:resource=(class)/>
+		</owl:Restriction>
+	</owl:equivalentClass>
+</owl:Class>

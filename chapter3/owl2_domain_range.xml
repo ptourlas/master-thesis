@@ -1,0 +1,4 @@
+<owl:ObjectProperty rdf:about=(property)>
+	<rdfs:domain rdf:resource=(class A)/>
+	<rdfs:range rdf:resource=(class B)/>
+</owl:ObjectProperty>

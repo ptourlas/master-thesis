@@ -1,0 +1,10 @@
+<owl:Class rdf:about=(new class)>
+	<owl:equivalentClass>
+		<owl:Class>
+			<owl:intersectionOf rdf:parseType="Collection">
+				<owl:Class rdf:about=(existing class)/>
+				<owl:Class rdf:about=(existing class)/>
+			</owl:intersectionOf>
+		</owl:Class>
+	</owl:equivalentClass>
+</owl:Class>

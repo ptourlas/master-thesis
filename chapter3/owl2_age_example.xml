@@ -1,0 +1,5 @@
+<Person rdf:about="John">
+	<hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">
+	51
+	</hasAge>
+</Person>
