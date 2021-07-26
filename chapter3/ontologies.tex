@@ -593,3 +593,32 @@ Mια κλάση δηλαδή δεν ορίζεται από τις ιδιότητες των
 	\item	\eng{qualifiedCardinality}, για τον προσδιορισμό ακριβούς πλήθους
 \end{itemize}
 
+\subsection{Χαρακτηριστικά σχέσεων}
+
+\quad Οι σχέσεις που ορίζουμε στην \eng{OWL2} μπορούν να εμπλουτιστούν
+με διάφορα χαρακτηριστικά που προέρχονται απευθείας από την
+$\mathcal{SROIQ}$ και φανερώνουν τις δυνατότητες λεπτομερούς
+περιγραφής στις οντολογίες. Παραθέτουμε μια λίστα των χαρακτηριστικών
+αυτών συνοδευόμενα από τις αντίστοιχες δηλώσεις:
+\begin{itemize}
+	\item αντίστροφη μιας δοσμένης σχέσης
+	      \eng{\lstinputlisting[numbers=none]{chapter3/owl2_inverses.xml}}
+	\item συμμετρική σχέση αν το Α συνδέεται με το Β, τότε και το Β
+	      συνδέεται με το Α)
+	      \eng{\lstinputlisting[numbers=none]{chapter3/owl2_symmetric.xml}}
+	\item αντισυμμετρική σχέση (αν το Α συνδέεται με το Β, τότε το Β
+	      δεν συνδέεται με το Α)
+	      \eng{\lstinputlisting[numbers=none]{chapter3/owl2_asymmetric.xml}}
+	\item ξένες σχέσεις (δυο άτομα δεν μπορούν να συνδέονται από
+	      τις δυο σχέσεις ταυτόχρονα)
+	      \eng{\lstinputlisting[numbers=none]{chapter3/owl2_disjoint_prop.xml}}
+	\item ανακλαστική σχέση (το υποκείμενο και το αντικείμενο μιας
+	      σχέσης μπορεί να είναι το ίδιο άτομο)
+	      \eng{\lstinputlisting[numbers=none]{chapter3/owl2_reflexive_prop.xml}}
+	\item μη ανακλαστική σχέση (το υποκείμενο και το αντικείμενο μιας
+	      σχέσης δεν μπορεί να είναι το ίδιο άτομο)
+	      \eng{\lstinputlisting[numbers=none]{chapter3/owl2_irreflexive_prop.xml}}
+	\item μεταβατική σχέση (αν το Α συνδέεται με το Β και το Β με το Γ,
+	      τότε και το Α συνδέεται με το Γ)
+	      \eng{\lstinputlisting[numbers=none]{chapter3/owl2_transitive_prop.xml}}
+\end{itemize}
