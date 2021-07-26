@@ -1,0 +1,3 @@
+<owl:ObjectProperty rdf:about=(new property)>
+	<owl:inverseOf rdf:resource=(existing property)/>
+</owl:ObjectProperty>

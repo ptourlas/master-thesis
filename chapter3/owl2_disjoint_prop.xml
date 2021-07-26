@@ -1,0 +1,3 @@
+<rdf:Description rdf:about=(property A)>
+	<owl:propertyDisjointWith rdf:resource=(property B)/>
+</rdf:Description>
