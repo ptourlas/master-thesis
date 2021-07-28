@@ -1,0 +1,44 @@
+<rdf:RDF
+		xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+		xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+		xmlns:owl="http://www.w3.org/2002/07/owl#"
+		xmlns="http://www.xfront.com/owl/ontologies/camera/#"
+		xmlns:camera="http://www.xfront.com/owl/ontologies/camera/#"
+		xml:base="http://www.xfront.com/owl/ontologies/camera/">
+
+	<owl:ObjectProperty rdf:about="cost">
+		<rdfs:domain rdf:resource="#PurchaseableItem" />
+		<rdfs:range rdf:resource="#Money" />
+	</owl:ObjectProperty>
+
+	<owl:ObjectProperty rdf:about="part" />
+
+	<owl:ObjectProperty rdf:about="lens">
+		<rdfs:subPropertyOf rdf:resource="#part" />
+		<rdfs:domain rdf:resource="#Camera" />
+		<rdfs:range rdf:resource="#Lens" />
+	</owl:ObjectProperty>
+
+	<owl:ObjectProperty rdf:about="body">
+		<rdfs:subPropertyOf rdf:resource="#part" />
+		<rdfs:domain rdf:resource="#Camera" />
+		<rdfs:range rdf:resource="#Body" />
+	</owl:ObjectProperty>
+
+	<owl:ObjectProperty rdf:about="viewFinder">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+		<rdfs:domain rdf:resource="#Camera" />
+		<rdfs:range rdf:resource="#Viewer" />
+	</owl:ObjectProperty>
+
+	<owl:ObjectProperty rdf:about="compatibleWith">
+		<rdfs:domain rdf:resource="#Lens" />
+		<rdfs:range rdf:resource="#Body" />
+	</owl:ObjectProperty>
+
+	<owl:ObjectProperty rdf:about="shutter-speed">
+		<rdfs:domain rdf:resource="#Body" />
+		<rdfs:range rdf:resource="#Range" />
+	</owl:ObjectProperty>
+
+</rdf:RDF>

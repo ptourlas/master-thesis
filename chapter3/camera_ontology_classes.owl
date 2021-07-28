@@ -1,0 +1,82 @@
+<rdf:RDF
+		xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+		xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+		xmlns:owl="http://www.w3.org/2002/07/owl#"
+		xmlns="http://www.xfront.com/owl/ontologies/camera/#"
+		xmlns:camera="http://www.xfront.com/owl/ontologies/camera/#"
+		xml:base="http://www.xfront.com/owl/ontologies/camera/">
+
+	<owl:Class rdf:about="Money">
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+	</owl:Class>
+
+	<owl:Class rdf:about="Range">
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+	</owl:Class>
+
+	<owl:Class rdf:about="PurchaseableItem">
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+	</owl:Class>
+
+	<owl:Class rdf:about="Camera">
+		<rdfs:subClassOf rdf:resource="#PurchaseableItem" />
+	</owl:Class>
+
+	<owl:Class rdf:about="Window">
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+	</owl:Class>
+
+	<!-- notice that these two draw from a different namespace -->
+	<camera:Window rdf:about="ThroughTheLens" />
+	<camera:Window rdf:about="WindowOnTopOfCamera" />
+
+	<owl:Class rdf:about="Body">
+		<rdfs:subClassOf rdf:resource="#PurchaseableItem" />
+	</owl:Class>
+
+	<owl:Class rdf:about="Lens">
+		<rdfs:subClassOf rdf:resource="#PurchaseableItem" />
+	</owl:Class>
+
+	<owl:Class rdf:about="Digital">
+		<rdfs:subClassOf rdf:resource="#Camera" />
+	</owl:Class>
+
+	<owl:Class rdf:about="Viewer">
+		<owl:oneOf rdf:parseType="Collection">
+			<camera:Window rdf:about="#ThroughTheLens" />
+			<camera:Window rdf:about="#WindowOnTopOfCamera" />
+		</owl:oneOf>
+	</owl:Class>
+
+	<owl:Class rdf:about="BodyWithNonAdjustableShutterSpeed">
+		<owl:intersectionOf rdf:parseType="Collection">
+			<owl:Class rdf:about="#Body" />
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="#shutter-speed" />
+				<owl:cardinality>0</owl:cardinality>
+			</owl:Restriction>
+		</owl:intersectionOf>
+	</owl:Class>
+
+	<owl:Class rdf:about="SLR">
+		<owl:intersectionOf rdf:parseType="Collection">
+			<owl:Class rdf:about="#Camera" />
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="#viewFinder" />
+				<owl:hasValue rdf:resource="#ThroughTheLens" />
+			</owl:Restriction>
+		</owl:intersectionOf>
+	</owl:Class>
+
+	<owl:Class rdf:about="Large-Format">
+		<rdfs:subClassOf rdf:resource="#Camera" />
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="#body" />
+				<owl:allValuesFrom rdf:resource="#BodyWithNonAdjustableShutterSpeed" />
+			</owl:Restriction>
+		</rdfs:subClassOf>
+	</owl:Class>
+
+</rdf:RDF>

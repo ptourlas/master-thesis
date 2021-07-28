@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+		xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+		xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+		xmlns:owl="http://www.w3.org/2002/07/owl#"
+		xmlns="http://www.xfront.com/owl/ontologies/camera/#"
+		xmlns:camera="http://www.xfront.com/owl/ontologies/camera/#"
+		xml:base="http://www.xfront.com/owl/ontologies/camera/">
+
+	<!-- a place to collect much of the OWL meta-data for the document -->
+	<owl:Ontology rdf:about="">
+		<rdfs:comment>
+        	Camera OWL Ontology                           
+      		Author: Roger L. Costello                                   
+        </rdfs:comment>
+	</owl:Ontology>
+
+	<!-- *********************CLASS DEFINITIONS*********************** -->
+
+	<owl:Class rdf:about="class name">
+		<!-- class details, if any -->
+	</owl:Class>
+
+	<!-- *******************PROPERTY DEFINITIONS*********************** -->
+
+	<owl:DatatypeProperty rdf:about="property name">
+		<!-- property details -->
+	</owl:DatatypeProperty>
+
+	<owl:ObjectProperty rdf:about="property name">
+		<!-- property details -->
+	</owl:ObjectProperty>
+
+</rdf:RDF>
