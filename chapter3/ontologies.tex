@@ -622,3 +622,35 @@ $\mathcal{SROIQ}$ και φανερώνουν τις δυνατότητες λεπτομερούς
 	      τότε και το Α συνδέεται με το Γ)
 	      \eng{\lstinputlisting[numbers=none]{chapter3/owl2_transitive_prop.xml}}
 \end{itemize}
+
+\section{Μια οντολογία για φωτογραφικές μηχανές}
+
+\quad Με μια ολοκληρωμένη οντολογία είναι δυνατή η καλύτερη
+κατανόηση του πως μπορούμε να συνταιριάξουμε τα εργαλεία
+της γλώσσας \eng{OWL2} για τις περιγραφές μας. Στη συνέχεια παρουσιάζεται
+μια περιγραφή διάφορων ειδών φωτογραφικών μηχανών, αρχικά μέσα από ένα
+κατάλληλο διάγραμμα και ύστερα σε τυπική σύνταξη \eng{RDF/XML}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.5]{thesisfig/ontology.eps}
+	\caption{Πλήρης απλή οντολογία}
+	\label{fig:cam_onto}
+\end{figure}
+
+\eng{
+	\lstinputlisting[numbers=none,tabsize=1]{
+		chapter3/camera_ontology_outline.owl}
+}
+
+\eng{\lstinputlisting[numbers=none,tabsize=1]{
+		chapter3/camera_ontology_classes.owl}
+}
+
+\eng{\lstinputlisting[numbers=none,tabsize=1]{
+		chapter3/camera_ontology_datatype_props.owl}
+}
+
+\eng{\lstinputlisting[numbers=none,tabsize=1]{
+		chapter3/camera_ontology_object_props.owl}
+}
