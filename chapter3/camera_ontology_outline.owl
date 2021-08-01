@@ -7,7 +7,7 @@
 		xmlns:camera="http://www.xfront.com/owl/ontologies/camera/#"
 		xml:base="http://www.xfront.com/owl/ontologies/camera/">
 
-	<!-- a place to collect much of the OWL meta-data for the document -->
+	<!-- OWL meta-data for the document -->
 	<owl:Ontology rdf:about="">
 		<rdfs:comment>
         	Camera OWL Ontology                           
@@ -15,13 +15,13 @@
         </rdfs:comment>
 	</owl:Ontology>
 
-	<!-- *********************CLASS DEFINITIONS*********************** -->
+	<!-- ******** CLASS DEFINITIONS ********-->
 
 	<owl:Class rdf:about="class name">
 		<!-- class details, if any -->
 	</owl:Class>
 
-	<!-- *******************PROPERTY DEFINITIONS*********************** -->
+	<!-- ******* PROPERTY DEFINITIONS ********* -->
 
 	<owl:DatatypeProperty rdf:about="property name">
 		<!-- property details -->
